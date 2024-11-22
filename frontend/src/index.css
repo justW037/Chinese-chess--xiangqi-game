@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .scrollbar-hide {
+    overflow: auto;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .border-board {
+    background-color: #ffe5c4;
+  }
+  .chess-color {
+    background-color: #fdd190;
+  }
+
+  .losing-general {
+    position: relative;
+  }
+  
+  .losing-general::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 3px;
+    height: 104%;
+    background-color: #dc2626;
+    transform: rotate(45deg);
+  }
+  .flipped {
+    transform: rotate(180deg);
+    will-change: transform;
+  }
+
+  .game-info-color {
+    background-color: #fffbf2;
+  }
+  .game-info-color-dark {
+    background-color: #f6f1e8;
+  }
+}
